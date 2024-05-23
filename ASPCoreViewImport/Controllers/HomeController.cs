@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ASPCoreViewImport.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ASPCoreViewImport.Controllers
 {
@@ -6,15 +7,34 @@ namespace ASPCoreViewImport.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            List<Student> students = new List<Student>
+            {
+                new Student { Id = 1,Name = "Abhishek", Gender = "male"},
+                new Student { Id = 2,Name = "Ayush", Gender = "male"},
+                new Student { Id = 3,Name = "Aryan", Gender = "male"},
+            };
+
+            return View(students);
         }
         public IActionResult About()
         {
-            return View();
+            List<Student> students = new List<Student>
+            {
+                new Student { Id = 1,Name = "Abhishek", Gender = "male"},
+                new Student { Id = 2,Name = "Ayush", Gender = "male"},
+                new Student { Id = 3,Name = "Aryan", Gender = "male"},
+            };
+            return View(students);
         }
         public IActionResult Contact()
         {
-            return View();
+            List<Student> students = new List<Student>
+            {
+                new Student { Id = 1,Name = "Abhishek", Gender = "male"},
+                new Student { Id = 2,Name = "Ayush", Gender = "male"},
+                new Student { Id = 3,Name = "Aryan", Gender = "male"},
+            };
+            return View(students);
         }
     }
 }
